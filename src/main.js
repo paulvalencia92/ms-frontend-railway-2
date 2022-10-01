@@ -1,0 +1,15 @@
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import './plugins'
+import axios from "axios";
+Vue.config.productionTip = false
+
+axios.defaults.baseURL = 'https://ms-backend-railway-production.up.railway.app/';
+
+new Vue({
+  router,
+  store,
+  render: function (h) { return h(App) }
+}).$mount('#app')
